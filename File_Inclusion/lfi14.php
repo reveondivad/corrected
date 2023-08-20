@@ -1,0 +1,1 @@
+<?php     include(""../common/header.php"");   ?>\n\n<form action=""/api/index.php"" method=""GET"">\n    <input type=""text"" name=""library"">\n</form>\n\n<?php\n$allowed_includes = ['library1', 'library2', 'library3'];\nif (isset($_GET['library']) && in_array($_GET['library'], $allowed_includes)) {\n    include(""includes/"".$_GET['library']."".php"");\n}\n?>\n

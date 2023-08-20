@@ -1,0 +1,1 @@
+# frozen_string_literal: true\n# Be sure to restart your server when you modify this file.\n\n# Use secure tokens for secret_key_base\nrequire 'securerandom'\n\nRailsgoat::Application.config.secret_key_base = SecureRandom.hex(64)

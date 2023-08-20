@@ -1,0 +1,1 @@
+<?php     include(""../common/header.php"");   ?>\n\n<form action=""/api/index.php"" method=""GET"">\n    <input type=""text"" name=""file"">\n</form>\n\n<?php\n   $file = str_replace('../', '', $_GET['file']);\n   if(isset($file) && preg_match('/^[a-z0-9\-_]+\.php$/i', $file))\n   {\n       include(""pages/$file"");\n   }\n   else\n   {\n       include(""index.php"");\n   }\n?>

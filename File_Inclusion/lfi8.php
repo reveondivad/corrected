@@ -1,0 +1,1 @@
+<?php     include(""../common/header.php"");   ?>\n\n<form action=""/api/index.php"" method=""POST"">\n    <input type=""text"" name=""class"">\n</form>\n\n<?php\n$class = basename($_POST['class']);\ninclude('includes/class_'.$class.'.php');\n?>\n

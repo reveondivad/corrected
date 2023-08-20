@@ -1,0 +1,1 @@
+<?php     include(""../common/header.php"");   ?>\n<?php\nhint(""something something something placeholder placeholder placeholder"");\n?>\n\n<form action=""/CMD-3/index.php"" method=""POST"">\n    Whois: <input type=""text"" name=""domain"">\n</form>\n\n<pre>\n<?php\n    $domain = escapeshellarg($_POST['domain']);\n    system(""/usr/bin/whois "" . $domain);\n ?>\n</pre>

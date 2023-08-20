@@ -1,0 +1,1 @@
+<?php     include(""../common/header.php"");   ?>\n\n<form action=""/api/index.php"" method=""GET"">\n    <input type=""text"" name=""file"">\n</form>\n\n\n<?php\n$file = basename($_GET['file']);\nif (substr($file, -4, 4) != '.php')\n echo file_get_contents($file);\nelse\n echo 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'.""\n"";\n?>\n

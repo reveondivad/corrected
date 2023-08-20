@@ -1,0 +1,1 @@
+<?php     include(""../common/header.php"");   ?>\n<?php  hint(""something something something placeholder placeholder placeholder""); ?>\n\n<form action=""/CMD-4/index.php"" method=""POST"">\n    <input type=""text"" name=""domain"">\n</form>\n\n<pre>\n<?php\n    $domain = escapeshellarg($_POST['domain']);\n    system(""whois "" . $domain);\n ?>\n</pre>
